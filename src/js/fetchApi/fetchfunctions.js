@@ -16,17 +16,17 @@ export async function listAllPokemons(urlApi = urlPokeApi){
 
 //Essa função ta separando o Tipo do pokemon
 export async function listTypePoke(pokemon) {
-    try{
+    try {
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         const data = await fetch(url);
         const response = await data.json();
-        //armazena os tipos do pokemon
-        const type = response.types[0].type.name
-        //Depois mandar para o Index e colocar na area do Type
-        return response;
-
-    }catch(error){
-        showError("Ops! Um erro inexperado ocorreu ao carregar o tipo de pokémons!");
+        
+        // Armazena e retorna apenas o primeiro tipo do Pokémon
+        const type = response.types[0].type.name;
+        return type; // Retorne apenas o tipo, não o objeto completo
+        
+    } catch (error) {
+        showError("Ops! Um erro inesperado ocorreu ao carregar o tipo de pokémons!");
         console.error(error.message);
     }   
 }
