@@ -1,8 +1,18 @@
-
 @import "header.css";
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxanium', cursive;
+}
 
 main{
     height: 100vh;
+}
+
+h5{
+    font-size: 25px;
 }
 
 body{
@@ -20,3 +30,17 @@ body{
     gap: 20px;
     flex-wrap: wrap;
 }
+
+.card-body{
+    width: 100vh; 
+}
+
+/* Teste de imagem escura
+img{
+    filter: grayscale(100%);
+}
+
+img:hover{
+    filter: grayscale(0%);
+}
+*/
