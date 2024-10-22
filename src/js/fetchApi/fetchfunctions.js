@@ -50,7 +50,7 @@ export async function listTypePoke(pokemon) {
     }   
 }
 
-export async function listTypePokesla(pokemon) {
+export async function listTypePoke2(pokemon) {
     try {
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         const data = await fetch(url);
@@ -69,5 +69,5 @@ export async function listTypePokesla(pokemon) {
 export async function imgType(type, type2) {    
     const color = colors[type];
 
-    console.log(color);
+    console.log(colortype);
 }
