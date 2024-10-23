@@ -1,20 +1,104 @@
-
 @import "header.css";
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxanium', cursive;
+}
 
 main{
     height: 100vh;
 }
 
+h5{
+    font-size: 25px;
+}
+
 body{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     row-gap: 40px;
     background-image: url("/src/assets/images/background-pokemon-field.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.wrapper-content{
+
+/* Teste de imagem escura
+img{
+    filter: grayscale(100%);
+}
+
+img:hover{
+    filter: grayscale(0%);
+}
+*/
+
+.fire {
+    background-color: rgba(255, 119, 119, 0.8); /* Cor com opacidade */
+}
+
+.grass {
+    background-color: rgba(222, 253, 224, 0.8); /* Cor com opacidade */
+}
+
+.electric {
+    background-color: rgba(252, 247, 222, 0.8); /* Cor com opacidade */
+}
+
+.water {
+    background-color: rgba(118, 207, 248, 0.8); /* Cor com opacidade */
+}
+
+.ground {
+    background-color: rgba(244, 231, 218, 0.8); /* Cor com opacidade */
+}
+
+.rock {
+    background-color: rgba(213, 213, 212, 0.8); /* Cor com opacidade */
+}
+
+.fairy {
+    background-color: rgba(252, 234, 255, 0.8); /* Cor com opacidade */
+}
+
+.poison {
+    background-color: rgba(152, 215, 165, 0.8); /* Cor com opacidade */
+}
+
+.bug {
+    background-color: rgba(248, 213, 163, 0.8); /* Cor com opacidade */
+}
+
+.dragon {
+    background-color: rgba(151, 179, 230, 0.8); /* Cor com opacidade */
+}
+
+.psychic {
+    background-color: rgba(234, 237, 161, 0.8); /* Cor com opacidade */
+}
+
+.flying {
+    background-color: rgba(245, 245, 245, 0.8); /* Cor com opacidade */
+}
+
+.fighting {
+    background-color: rgba(230, 224, 212, 0.8); /* Cor com opacidade */
+}
+
+.normal {
+    background-color: rgba(245, 245, 245, 0.8); /* Cor com opacidade */
+}
+
+.wrapper-content {
+    background-color: #fff; /* Cor de fundo neutra para o conteúdo do card */
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    width: 100%; 
     display: flex;
     justify-content: center;
     gap: 20px;

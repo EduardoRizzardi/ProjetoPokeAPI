@@ -1,10 +1,30 @@
-
-.header-content{
+.header-content {
     width: 100%;
-    text-align: center;
     margin-top: 20px;
 }
 
-.header-logo{
-    max-width: 52vw;
+.header-logo {
+    max-width: 52vw; /* Tamanho máximo do logo */
 }
+
+.search-bar {
+    margin-top: 20px; /* Espaçamento acima da barra de pesquisa */
+}
+
+.filters {
+    margin-top: 10px; /* Espaçamento acima dos filtros */
+}
+
+#pokemon-list {
+    margin-top: 20px; /* Espaçamento acima da lista de cards */
+    margin-left: 30px;
+}
+
+/* Estilo para os cards */
+.card {
+    margin-bottom: 20px; /* Espaçamento entre os cards */
+    margin-left: 20px;
+}
+
+
+
