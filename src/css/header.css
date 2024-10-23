@@ -17,10 +17,14 @@
 
 #pokemon-list {
     margin-top: 20px; /* Espaçamento acima da lista de cards */
+    margin-left: 30px;
 }
 
 /* Estilo para os cards */
 .card {
     margin-bottom: 20px; /* Espaçamento entre os cards */
+    margin-left: 20px;
 }
+
+
 
