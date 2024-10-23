@@ -18,7 +18,43 @@
 <body>
 
     <header class="header-content">
-        <img class="header-logo"  src="src/assets/images/pokemon-title.svg" alt="Logo Pokemon">
+        <div class="container-fluid"> <!-- Use container-fluid para largura total -->
+            <div class="text-center mb-3">
+                <img class="header-logo" src="src/assets/images/pokemon-title.svg" alt="Logo Pokemon">
+            </div>
+            <div class="row">
+                <!-- Coluna para a Barra de Pesquisa (ajustada para ficar mais à esquerda) -->
+                <div class="col-md-3 pe-0" class="margem-barra-card"> <!-- Ajuste para 3 colunas e remova a margem à direita -->
+                    <form class="search-bar" id="search-form">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Procure seu Pokémon" id="search-input" aria-label="Procure seu Pokémon">
+                            <button class="btn btn-outline-secondary" type="submit" id="search-button">Buscar</button>
+                        </div>
+                    </form>
+    
+                    <!-- Filtros -->
+                    <div class="filters">
+                        <label for="type-filter">Filtrar por tipo:</label>
+                        <select id="type-filter" class="form-select mb-3">
+                            <option value="">Todos</option>
+                            <option value="fire">Fogo</option>
+                            <option value="water">Água</option>
+                            <option value="grass">Planta</option>
+                            <option value="electric">Elétrico</option>
+                            <option value="psychic">Psíquico</option>
+                            <!-- Adicione mais tipos conforme necessário -->
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Coluna para os Cards -->
+                <div class="col-md-9" >
+                    <div class="row" id="pokemon-list">
+                        <!-- Aqui seus cards de Pokémon serão renderizados -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     
     <main>
