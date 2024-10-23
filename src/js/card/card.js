@@ -8,10 +8,10 @@ export function createCard(pokemon, index, type, type2) {
 
     // Adicionando classes de tipo ao card
     const card = `<div class="card ${type} ${type2 ? type2 : ''}" style="width: 18rem;">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index}.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <img src="${typeimg1}" alt="${type} type image"> 
+                        <img src="${typeimg1}" alt="${type} type image class="type-img""> 
                         ${type2 ? `<img src="${typeimg2}" alt="${type2} type image">` : ''} 
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index}.png" class="card-img-top" alt="...">
                         <h5 class="card-title">${pokemon.name}</h5>
                         <p class="text-id">N° ${index}</p>
                         <p class="text-type">Type: ${type} ${type2 ? `/ ${type2}` : ''}</p>

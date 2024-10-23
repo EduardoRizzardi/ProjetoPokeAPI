@@ -14,6 +14,7 @@ main{
 h5{
     font-size: 1.8em;
 }
+
 p{
     font-size: 1.3em;
 }
@@ -123,4 +124,20 @@ body{
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+.Poke-top{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.type-img{
+    
+}
+
+.col-md-3{
+    background-color: #f3f3f3;
+    height: 700px;
+    box-shadow: 2px 3px 3px rgb(41, 41, 41);
+    margin-top: 20px;
 }
