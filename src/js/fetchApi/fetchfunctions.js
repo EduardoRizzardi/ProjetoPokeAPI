@@ -15,7 +15,8 @@ const colors = {
     psychic: '#eaeda1',
     flying: '##A9A9A9',
     fighting: '#E6E0D4',
-    normal: '#F5F5F5'
+    normal: '#F5F5F5',
+    ice: '#98d8d8'
 }
 
 export async function listAllPokemons(urlApi = urlPokeApi){

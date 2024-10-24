@@ -7,7 +7,7 @@ export function createCard(pokemon, index, type, type2) {
     const typeimg2 = type2 ? `src/assets/types/${type2}.svg` : '';  
 
     // Adicionando classes de tipo ao card
-    const card = `<div class="card ${type} ${type2 ? type2 : ''}" style="width: 18rem;">
+    const card = `<div class="card ${type} " style="width: 18rem;">
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index}.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <img src="${typeimg1}" alt="${type} type image"> 
