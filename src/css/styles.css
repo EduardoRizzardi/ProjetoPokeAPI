@@ -25,7 +25,7 @@ body{
     justify-content: flex-end;
     row-gap: 40px;
     /*background-image: url("/src/assets/images/background-pokemon-field3.jpg");*/
-    background-image: linear-gradient(rgb(77, 185, 235), rgb(255, 255, 255));
+    background-image: linear-gradient(rgb(77, 185, 235), rgb(188, 242, 255));
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -57,64 +57,71 @@ body{
     margin-left: 2px;
 }
 
+.ghost{
+    background-color: #705898;
+}
+.ice{
+    background-color: #98d8d8;
+}
+
 .fire {
-    background-color: rgba(255, 119, 119, 0.8); /* Cor com opacidade */
+    background-color: #f05030; 
 }
 
 .grass {
-    background-color: rgba(222, 253, 224, 0.8); /* Cor com opacidade */
+    background-color: #78c850 ; 
 }
 
 .electric {
-    background-color: rgba(252, 247, 222, 0.8); /* Cor com opacidade */
+    background-color: #f8d030; 
 }
 
 .water {
-    background-color: rgba(118, 207, 248, 0.8); /* Cor com opacidade */
+    background-color: #6890f0;
 }
 
 .ground {
-    background-color: rgba(244, 231, 218, 0.8); /* Cor com opacidade */
+    background-color: #e0c068; 
 }
 
 .rock {
-    background-color: rgba(213, 213, 212, 0.8); /* Cor com opacidade */
+    background-color: #b8a038; 
 }
 
 .fairy {
-    background-color: rgba(252, 234, 255, 0.8); /* Cor com opacidade */
+    background-color: rgba(252, 234, 255, 0.8); 
 }
 
 .poison {
-    background-color: rgba(152, 215, 165, 0.8); /* Cor com opacidade */
+    background-color: #a040a0; 
 }
 
 .bug {
-    background-color: rgba(248, 213, 163, 0.8); /* Cor com opacidade */
+    background-color: #68a090; 
 }
 
 .dragon {
-    background-color: rgba(151, 179, 230, 0.8); /* Cor com opacidade */
+    background-color: #7038f8; 
 }
 
 .psychic {
-    background-color: rgba(234, 237, 161, 0.8); /* Cor com opacidade */
+    background-color: #f85888; 
 }
 
 .flying {
-    background-color: rgba(245, 245, 245, 0.8); /* Cor com opacidade */
+    background-color: #a890f0; 
 }
 
 .fighting {
-    background-color: rgba(230, 224, 212, 0.8); /* Cor com opacidade */
+    background-color: #903028; 
 }
 
 .normal {
-    background-color: rgba(245, 245, 245, 0.8); /* Cor com opacidade */
+    background-color: #a8a878; 
 }
 
 .wrapper-content {
-    background-color: #fff; /* Cor de fundo neutra para o conteúdo do card */
+    background-color: #fff; 
     padding: 15px;
     border-radius: 10px;
     position: relative;
