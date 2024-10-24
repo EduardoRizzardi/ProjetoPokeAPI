@@ -1,0 +1,17 @@
+.line{
+    height: 2px;
+    background-color: #656565;
+    margin: 10px 0 20px 0;
+}
+
+.Poke-top{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.col-md-3{
+    background-color: #f3f3f3;
+    height: 700px;
+    box-shadow: 2px 3px 3px rgb(41, 41, 41);
+    margin-top: 20px;
+}
