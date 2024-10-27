@@ -6,7 +6,7 @@ export async function listAllPokemons(urlApi = urlPokeApi){
     try{
         const data = await fetch(urlApi);
         const response = await data.json();
-
+        
         return response;
 
     }catch(error){
@@ -14,6 +14,7 @@ export async function listAllPokemons(urlApi = urlPokeApi){
         console.error(error.message);
     }
 }
+
 
 //Essa função ta separando o Tipo do pokemon
 export async function listTypePoke(pokemon) {
@@ -32,7 +33,7 @@ export async function listTypePoke(pokemon) {
         showError("Ops! Um erro inesperado ocorreu ao carregar o tipo de pokémons!");
         console.error(error.message);
     }   
-}
+};
 
 export async function listTypePoke2(pokemon) {
     try {
@@ -48,7 +49,40 @@ export async function listTypePoke2(pokemon) {
         showError("Ops! Um erro inesperado ocorreu ao carregar o tipo de pokémons!");
         console.error(error.message);
     }   
-}
+};
 
 export async function imgType(type, type2) {    
 }
+
+export async function getPokemon(pokemon) {
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+    const data = await fetch(url);
+    const response = await data.json();   
+
+    return response;
+}
+
+export async function pokestatus(pokemon){
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+    const data = await fetch(url);
+    const response = await data.json();   
+
+    const hp = response.stats[0].base_stat;
+
+    return hp
+}
+
+const search = document.querySelector('#search-input');
+const filter = document.querySelector('#type-filter');
+
+export async function searchpoke(search) {
+    search.addEventListener('change', async (event) => {
+        const poke = await getPokemon(event.target.value);
+        console.log(poke);
+    });
+}
+
+filter.addEventListener('change', async (event) =>{
+    const poke = await getPokemon(event.target.value);
+    //console.log(poke)
+});
