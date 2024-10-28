@@ -6,3 +6,4 @@ export const urlPokeApi = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offs
 offset += limit;
 
 export const pokemonList = document.getElementById("pokemon-list");
+export const pokedetalhes = document.getElementById("poke-detalhes");

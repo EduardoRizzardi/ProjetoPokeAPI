@@ -18,7 +18,8 @@
 .card:hover{
     transform: scale(1.02);
 }
-/*Colors Pole*/
+
+/*Colors Poke*/
 
 .steel{
     background-color: #b8b8d0;
@@ -37,7 +38,7 @@
 }
 
 .fire {
-    background-color: #f05030; 
+    background-color: #d6583f; 
 }
 
 .grass {

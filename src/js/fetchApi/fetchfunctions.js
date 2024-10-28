@@ -75,14 +75,16 @@ export async function pokestatus(pokemon){
 const search = document.querySelector('#search-input');
 const filter = document.querySelector('#type-filter');
 
-export async function searchpoke(search) {
-    search.addEventListener('change', async (event) => {
-        const poke = await getPokemon(event.target.value);
-        console.log(poke);
-    });
-}
 
-filter.addEventListener('change', async (event) =>{
-    const poke = await getPokemon(event.target.value);
-    //console.log(poke)
+
+search.addEventListener('change', async (event) => {
+const poke = await getPokemon(event.target.value);
+console.log(poke)
+})
+
+
+
+filter.addEventListener('click', async (event) =>{
+    var select = document.getElementById('type-filter').value;
+    console.log(select);
 });
