@@ -15,3 +15,16 @@
     box-shadow: 2px 3px 3px rgb(41, 41, 41);
     margin-top: 20px;
 }
+
+.search-bar {
+    margin-top: 20px; /* Espaçamento acima da barra de pesquisa */
+}
+
+.filters {
+    margin-top: 10px; /* Espaçamento acima dos filtros */
+}
+
+#pokemon-list {
+    margin-top: 20px; /* Espaçamento acima da lista de cards */
+    margin-left: 30px;
+}
