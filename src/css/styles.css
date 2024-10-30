@@ -17,6 +17,10 @@ h5{
     font-size: 1.8em;
 }
 
+h1{
+    color: #000;
+}
+
 p{
     font-size: 1.3em;
 }
@@ -30,7 +34,7 @@ p{
     font-weight: 600;
     color: white;
     background-color: #444;
-    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    box-shadow: 2px 3px 3px rgb(41, 41, 41);
 }
 
 .pokebutton:active {

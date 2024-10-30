@@ -5,7 +5,7 @@ export async function getPokemon(pokemon) {
     try {
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         const response = await fetch(url);
-        return await response.json();
+        return await response.json();   
     } catch (error) {
         showError("Ops! Um erro inesperado ocorreu ao carregar os dados do Pokémon!");
         console.error(error.message);
