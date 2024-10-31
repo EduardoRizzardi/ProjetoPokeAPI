@@ -2,30 +2,31 @@ import { createCard } from "./card/card.js";
 import { listAllPokemons, listTypePoke, listTypePoke2 } from "./fetchApi/fetchfunctions.js";
 
 let allPokemons = [];
+let limit = 25;
+let offset = 0;
 
 async function loadPokemons() {
-    const data = await listAllPokemons();
-    allPokemons = data.results;
-    displayPokemons(); 
+    const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+    const data = await listAllPokemons(url);
+    allPokemons = [...allPokemons, ...data.results];
+    displayPokemons();
 }
 
 async function displayPokemons() {
     const pokemonList = document.getElementById('pokemon-list');
-    pokemonList.innerHTML = '';
 
     const promises = allPokemons.map(async (pokemon, index) => {
         const type = await listTypePoke(pokemon.name);
         const type2 = await listTypePoke2(pokemon.name);
 
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png`;
-
+        
         const id = index + 1;
 
         return { pokemon, id, type, type2, imageUrl };
     });
 
     const pokemonsData = await Promise.all(promises);
-
 
     pokemonsData.forEach(({ pokemon, id, type, type2, imageUrl }) => {
         createCard(pokemon, id, type, type2, imageUrl);
@@ -52,12 +53,11 @@ function searchPokemons(query) {
     });
 };
 
-const searchinput = document.getElementById('search-input');
-searchinput.addEventListener('input', (event) => {
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', (event) => {
     const query = event.target.value;
     searchPokemons(query); 
 });
-
 
 async function filterByType(selectedType) {
     const pokemonList = document.getElementById('pokemon-list');
@@ -91,3 +91,11 @@ typeFilter.addEventListener('change', (event) => {
 });
 
 loadPokemons();
+
+const loadMoreButton = document.getElementById('Botão-Final-VerMais');
+loadMoreButton.addEventListener('click', async () => {
+    const pokemonList = document.getElementById('pokemon-list');
+    pokemonList.innerHTML = '';
+    offset += limit;
+    await loadPokemons(); 
+});
