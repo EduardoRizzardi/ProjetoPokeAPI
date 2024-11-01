@@ -16,7 +16,6 @@ export async function listAllPokemons(urlApi = PokeUrl) {
     try {
         const data = await fetch(urlApi);
         const response = await data.json();
-        
         return response;
     } catch (error) {
         showError("Ops! Um erro inesperado ocorreu ao carregar a lista de pokémons!");

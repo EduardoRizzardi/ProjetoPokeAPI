@@ -92,8 +92,8 @@ typeFilter.addEventListener('change', (event) => {
 
 loadPokemons();
 
-const loadMoreButton = document.getElementById('Botão-Final-VerMais');
-loadMoreButton.addEventListener('click', async () => {
+const buttonLoad = document.getElementById('Botão-Final-VerMais');
+buttonLoad.addEventListener('click', async () => {
     const pokemonList = document.getElementById('pokemon-list');
     pokemonList.innerHTML = '';
     offset += limit;

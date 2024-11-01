@@ -1,12 +1,23 @@
 import { listAllPokemons } from "../fetchApi/fetchfunctions.js";
 
-window.onload = async() =>{
-    const urlParam = new URLSearchParams(window.location.search);
-    const PokeUrl = urlParam.get('url')
+let pokemon = [];
 
-    const detailspoke = await listAllPokemons(PokeUrl);
+window.onload = async () => {
+    Pokedetails().then((data) => {
+        console.log(data)
+    });
+}
 
-    console.log(detailspoke)
+function Pokedetails() {
+    return new Promise(async (resolve) => {
+        const urlParam = new URLSearchParams(window.location.search);
+        const PokeUrl = urlParam.get('url');
 
-    return await detailspoke;
+        pokemon = await listAllPokemons(PokeUrl);
+        resolve(pokemon);
+
+        console.log("Vida: ",pokemon.stats[0].stat.name)
+        const pokename = document.getElementById('Pokename')
+        pokename.innerHTML = `${pokemon.name}`;
+    });
 }
