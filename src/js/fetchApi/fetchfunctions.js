@@ -12,10 +12,12 @@ export async function getPokemon(pokemon) {
     }   
 }
 
-export async function listAllPokemons(urlApi = urlPokeApi) {
+export async function listAllPokemons(urlApi = PokeUrl) {
     try {
-        const response = await fetch(urlApi);
-        return await response.json();
+        const data = await fetch(urlApi);
+        const response = await data.json();
+        
+        return response;
     } catch (error) {
         showError("Ops! Um erro inesperado ocorreu ao carregar a lista de pokémons!");
         console.error(error.message);

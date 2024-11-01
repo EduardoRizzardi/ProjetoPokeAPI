@@ -13,19 +13,10 @@ export function createCard(pokemon, id, type, type2, imageUrl) {
                     <h5 class="card-title">${pokemon.name}</h5>
                     <p class="text-id">N° ${id}</p>
                     <p class="text-type">Type: ${type} ${type2 ? ` / ${type2}` : ''}</p>
-                    <a href="#" class="pokebutton" data-id="${id}">Ver mais</a>
+                    <a href="/details.html?url=${pokemon.url}" class="pokebutton" data-id="${id}">Ver mais</a>
                 </div>
             </div>
     `;
 
-    // Adiciona o card ao container da lista de Pokémon
     pokemonList.innerHTML += card;
-
-
-    const button = pokemonList.querySelector(`.pokebutton[data-id="${id}"]`);
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        console.log(`ID do Pokémon selecionado: ${id}`);
-
-    });
 }
