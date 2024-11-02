@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxanium', cursive;
+    color: #000;
+}
+
+.imgshiny{
+    width: 30%;
+}
+
+.card-img-top{
+    width: 50%;
+    margin-left: 50px;
+}
+
+.type-img{
+    margin-left: 25%;
+    width: 5%;
+}
+
+h1{
+    margin-top: 10px;
+    text-align: center;
+}

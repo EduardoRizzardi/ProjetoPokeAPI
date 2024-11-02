@@ -2,7 +2,7 @@ import { createCard } from "./card/card.js";
 import { listAllPokemons, listTypePoke, listTypePoke2 } from "./fetchApi/fetchfunctions.js";
 
 let allPokemons = [];
-let limit = 25;
+let limit = 151;
 let offset = 0;
 
 async function loadPokemons() {
