@@ -16,8 +16,7 @@ function Pokedetails() {
         pokemon = await listAllPokemons(PokeUrl);
         resolve(pokemon);
 
-        const pokename = document.getElementById('Pokename')
-        pokename.innerHTML = `${pokemon.name}`;
+        
 
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
         const ShinyUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${pokemon.id}.png`;
@@ -50,14 +49,16 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
     const typeimg1 = `src/assets/types/${type}.svg`;
     const typeimg2 = type2 ? `src/assets/types/${type2}.svg` : '';  
 
-    const card = `   
+    const card = `
+       
         <section id="imagem-pokemon">
             <img src="${imageUrl}" class="card-img-top" alt="${pokemon.name}">
         </section>
         <section id="imagem-typepokemon">
             ${typeimg1 ? `<img src="${typeimg1}" alt="${type} type image" class="type-img">` : ''}
             ${typeimg2 ? `<img src="${typeimg2}" alt="${type2} type image" class="type-img">` : ''}
-        </section>        
+        </section>
+         <h2> ${pokemon.name}</h2>           
         <div id="container-status">
             <p>hp</p>
             <progress id='progress' max='255' value='${hp}'></progress>
