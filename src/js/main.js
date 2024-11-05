@@ -13,8 +13,6 @@ async function loadPokemons() {
 }
 
 async function displayPokemons() {
-    const pokemonList = document.getElementById('pokemon-list');
-
     const promises = allPokemons.map(async (pokemon, index) => {
         const type = await listTypePoke(pokemon.name);
         const type2 = await listTypePoke2(pokemon.name);
@@ -41,7 +39,7 @@ function searchPokemons(query) {
     const pokemonList = document.getElementById('pokemon-list');
     pokemonList.innerHTML = '';
 
-    filteredPokemons.forEach(async (pokemon, index) => {
+    filteredPokemons.forEach(async (pokemon) => {
         const type = await listTypePoke(pokemon.name);
         const type2 = await listTypePoke2(pokemon.name);
 

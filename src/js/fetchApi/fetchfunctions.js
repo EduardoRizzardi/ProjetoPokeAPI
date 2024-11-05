@@ -1,4 +1,3 @@
-import { urlPokeApi } from "../constants/constants.js";
 import showError from "../errors/errors.js";
 
 export async function getPokemon(pokemon) {

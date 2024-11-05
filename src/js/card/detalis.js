@@ -1,6 +1,7 @@
 import { listAllPokemons} from "../fetchApi/fetchfunctions.js";
 
 let pokemon = [];
+let  id = 0;
 
 window.onload = async () => {
     Pokedetails().then((data) => {
@@ -24,6 +25,8 @@ function Pokedetails() {
 
         const weight = pokemon.weight / 10;
         const height = pokemon.height / 10;
+
+        id = pokemon.id;
 
         const type = pokemon.types[0].type.name
         const type2 = pokemon.types[1]?.type.name || '';
@@ -84,7 +87,32 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
         <p>height: ${height}m</p>
 
         <p>Habilidades: ${abilities} / ${abilities2}</p>
-        <button>Anterior</button><button>Proximo</button>
+        <a href="/index.html"> VOLTAR </a>
     `
     pagedetalis.innerHTML += card;
+}
+
+const proxi = document.getElementById('btProximo');
+const anter = document.getElementById('btAnterior')
+
+proxi.addEventListener('click', async () => {
+    proximopoke()
+})
+
+anter.addEventListener('click', async () => {
+    pokeanterior()
+})
+
+function proximopoke(){
+    const urlParam = new URLSearchParams(window.location.search);
+    const PokeUrl = urlParam.get('url');
+    id += 1;
+    console.log(id)
+}
+
+function pokeanterior(){
+    const urlParam = new URLSearchParams(window.location.search);
+    const PokeUrl = urlParam.get('url');
+    id -= 1;
+    console.log(id)
 }
