@@ -1,27 +1,156 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Oxanium', cursive;
-    color: #000;
 }
 
-.imgshiny{
-    width: 30%;
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
 }
 
-.card-img-top{
-    width: 50%;
-    margin-left: 50px;
-}
-
-.type-img{
-    margin-left: 25%;
-    width: 5%;
-}
-
-h1{
-    margin-top: 10px;
+#conatinerDetails {
+    background: linear-gradient(rgb(77, 185, 235), rgb(188, 242, 255));
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    
     text-align: center;
+}
+
+#Pokename {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0056b3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#imagem-pokemon img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+#imagem-typepokemon {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.type-img {
+    width: 25px;
+}
+
+#container-status {
+    margin: 15px 0;
+    text-align: center;
+}
+
+#container-status p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#container-status progress {
+    width: 30%;
+    height: 15px;
+    margin-bottom: 10px;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+#container-shiny {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imgshiny {
+    width: 50%;
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003d82;
+}
+
+@media (max-width: 768px) {
+    #conatinerDetails {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    #Pokename {
+        font-size: 2rem;
+    }
+
+    #container-status p {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #container-status progress {
+        width: 90%;
+    }
+
+    .imgshiny {
+        width: 60%;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #Pokename {
+        font-size: 1.8rem;
+    }
+
+    #container-status p {
+        font-size: 0.9rem;
+    }
+
+    .imgshiny {
+        width: 70%;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
 }

@@ -17,8 +17,7 @@ function Pokedetails() {
         pokemon = await listAllPokemons(PokeUrl);
         resolve(pokemon);
 
-        const pokename = document.getElementById('Pokename')
-        pokename.innerHTML = `${pokemon.name}`;
+        
 
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
         const ShinyUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${pokemon.id}.png`;
@@ -53,26 +52,28 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
     const typeimg1 = `src/assets/types/${type}.svg`;
     const typeimg2 = type2 ? `src/assets/types/${type2}.svg` : '';  
 
-    const card = `   
+    const card = `
+       
         <section id="imagem-pokemon">
             <img src="${imageUrl}" class="card-img-top" alt="${pokemon.name}">
         </section>
         <section id="imagem-typepokemon">
             ${typeimg1 ? `<img src="${typeimg1}" alt="${type} type image" class="type-img">` : ''}
             ${typeimg2 ? `<img src="${typeimg2}" alt="${type2} type image" class="type-img">` : ''}
-        </section>        
+        </section>
+         <h2> ${pokemon.name}</h2>           
         <div id="container-status">
-            <p>hp</p>
-            <progress id='progress' max='255' value='${hp}'></progress>
-            <p>attack</p>
+            <p>hp: ${hp}</p>
+            <progress id='progress' max='255' value='${hp}'"></progress>
+            <p>attack: ${attack}</p>
             <progress id='progress' max='255' value='${attack}'></progress>
-            <p>defense</p>
+            <p>defense: ${defense}</p>
             <progress id='progress' max='255' value='${defense}'></progress>
-            <p>special-attack</p>
+            <p>special-attack: ${specialatt}</p>
             <progress id='progress' max='255' value='${specialatt}'></progress>
-            <p>special-defense</p>
+            <p>special-defense: ${specialdef}</p>
             <progress id='progress' max='255' value='${specialdef}'></progress>
-            <p>speed</p>
+            <p>speed: ${speed}</p>
             <progress id='progress' max='255' value='${speed}'></progress>
         </div>
 
@@ -87,13 +88,13 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
         <p>height: ${height}m</p>
 
         <p>Habilidades: ${abilities} / ${abilities2}</p>
-        <a href="/index.html"> VOLTAR </a>
     `
     pagedetalis.innerHTML += card;
 }
 
 const proxi = document.getElementById('btProximo');
-const anter = document.getElementById('btAnterior')
+const anter = document.getElementById('btAnterior');
+const voltar = document.getElementById('btVoltar');
 
 proxi.addEventListener('click', async () => {
     proximopoke()
@@ -103,16 +104,27 @@ anter.addEventListener('click', async () => {
     pokeanterior()
 })
 
+voltar.addEventListener('click', async () => {
+    voltarpole()
+})
+
+function voltarpole(){
+    const proxiurl = new URL(`http://127.0.0.1:5500/index.html`);
+    console.log(proxiurl.toString());
+    window.location.href = proxiurl.toString();
+}
+
+
 function proximopoke(){
-    const urlParam = new URLSearchParams(window.location.search);
-    const PokeUrl = urlParam.get('url');
-    id += 1;
-    console.log(id)
+    id += 1; 
+    const proxiurl = new URL(`http://127.0.0.1:5500/details.html?url=https://pokeapi.co/api/v2/pokemon/${id}/`);
+    console.log(proxiurl.toString());
+    window.location.href = proxiurl.toString();
 }
 
 function pokeanterior(){
-    const urlParam = new URLSearchParams(window.location.search);
-    const PokeUrl = urlParam.get('url');
     id -= 1;
-    console.log(id)
+    const proxiurl = new URL(`http://127.0.0.1:5500/details.html?url=https://pokeapi.co/api/v2/pokemon/${id}/`);
+    console.log(proxiurl.toString());
+    window.location.href = proxiurl.toString();
 }
