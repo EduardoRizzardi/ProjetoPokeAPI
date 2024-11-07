@@ -12,6 +12,7 @@
 .col-md-3{
     background-color: #f3f3f3;
     height: 700px;
+    width: 25%;
     box-shadow: 2px 3px 3px rgb(41, 41, 41);
     margin-top: 20px;
     margin-left: 10px;
