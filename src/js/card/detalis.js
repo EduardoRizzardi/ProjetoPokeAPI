@@ -17,7 +17,7 @@ function Pokedetails() {
         pokemon = await listAllPokemons(PokeUrl);
         resolve(pokemon);
 
-        
+        document.title = `${pokemon.name}`
 
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
         const ShinyUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${pokemon.id}.png`;
@@ -61,7 +61,7 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
             ${typeimg1 ? `<img src="${typeimg1}" alt="${type} type image" class="type-img">` : ''}
             ${typeimg2 ? `<img src="${typeimg2}" alt="${type2} type image" class="type-img">` : ''}
         </section>
-         <h2> ${pokemon.name}</h2>           
+        <h2> ${id}.${pokemon.name}</h2>     
         <div id="container-status">
             <p>hp: ${hp}</p>
             <progress id='progress' max='255' value='${hp}'"></progress>
@@ -94,7 +94,6 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
 
 const proxi = document.getElementById('btProximo');
 const anter = document.getElementById('btAnterior');
-const voltar = document.getElementById('btVoltar');
 
 proxi.addEventListener('click', async () => {
     proximopoke()
@@ -104,27 +103,24 @@ anter.addEventListener('click', async () => {
     pokeanterior()
 })
 
-voltar.addEventListener('click', async () => {
-    voltarpole()
-})
-
-function voltarpole(){
-    const proxiurl = new URL(`http://127.0.0.1:5500/index.html`);
-    console.log(proxiurl.toString());
-    window.location.href = proxiurl.toString();
-}
-
 
 function proximopoke(){
     id += 1; 
-    const proxiurl = new URL(`http://127.0.0.1:5500/details.html?url=https://pokeapi.co/api/v2/pokemon/${id}/`);
-    console.log(proxiurl.toString());
-    window.location.href = proxiurl.toString();
+    const urlParam = new URLSearchParams(window.location.search);
+    urlParam.set('url', `https://pokeapi.co/api/v2/pokemon/${id}/`);
+    window.location.search = urlParam;
 }
+
 
 function pokeanterior(){
     id -= 1;
-    const proxiurl = new URL(`http://127.0.0.1:5500/details.html?url=https://pokeapi.co/api/v2/pokemon/${id}/`);
-    console.log(proxiurl.toString());
-    window.location.href = proxiurl.toString();
+    console.log(id)
+    if(id === 0){
+        document.getElementById("btAnterior").disabled = true;
+        id += 1;
+    }else{
+        const urlParam = new URLSearchParams(window.location.search);
+        urlParam.set('url', `https://pokeapi.co/api/v2/pokemon/${id}/`);
+        window.location.search = urlParam;
+    }
 }
