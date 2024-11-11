@@ -32,24 +32,29 @@ async function displayPokemons() {
 }
 
 function searchPokemons(query) {
-    const filteredPokemons = allPokemons.filter(pokemon =>
-        pokemon.name.toLowerCase().includes(query.toLowerCase())
-    );
-
     const pokemonList = document.getElementById('pokemon-list');
     pokemonList.innerHTML = '';
+
+    
+    const filteredPokemons = allPokemons.filter(pokemon => {
+        const pokemonId = allPokemons.findIndex(p => p.name === pokemon.name) + 1; 
+        
+        
+        return pokemon.name.toLowerCase().includes(query.toLowerCase()) || 
+               pokemonId === parseInt(query); 
+    });
 
     filteredPokemons.forEach(async (pokemon) => {
         const type = await listTypePoke(pokemon.name);
         const type2 = await listTypePoke2(pokemon.name);
 
         const id = allPokemons.findIndex(p => p.name === pokemon.name) + 1; 
-
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 
         createCard(pokemon, id, type, type2, imageUrl);
     });
 };
+
 
 const searchInput = document.getElementById('search-input');
 searchInput.addEventListener('input', (event) => {
