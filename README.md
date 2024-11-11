@@ -1,13 +1,13 @@
 # Projeto Pokedex
 
-Esse projeto foi desenvolvido por @EduardoRizzardi e @Douglasx06, com o intuito de criar uma pokedex resposiva e interativa e funcional para o projeto final do curso Tecnico em Desenvolvimento de sistema no Senac TECH.
+Esse projeto foi desenvolvido por [Eduardo](https://github.com/EduardoRizzardi) e [Douglas](https://github.com/Douglasx06), com o intuito de criar uma pokedex resposiva e interativa e funcional para o projeto final do curso Tecnico em Desenvolvimento de sistema no Senac TECH.
 
 # Funcionalidades
 
-Mostrar todos os pokemon.
-Buscar os Pokemon.
-Filtrar os Pokemon.
-Buscar detalhes sobre os Pokemon.
+*Mostrar todos os pokemon.
+*Buscar os Pokemon.
+*Filtrar os Pokemon.
+*Buscar detalhes sobre os Pokemon.
 
 # Como funciona
 

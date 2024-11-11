@@ -39,16 +39,15 @@ function Pokedetails() {
 
         const abilities = pokemon.abilities[0].ability.name;
         const abilities2 = pokemon.abilities[1]?.ability.name;
-        const abilities3 = pokemon.abilities[2]?.ability.name;
 
-        createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, height, abilities, abilities2, abilities3, hp, attack, defense, specialatt, specialdef, speed)
+        createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, height, abilities, abilities2, hp, attack, defense, specialatt, specialdef, speed)
     });
 }
 
 
 const pagedetalis = document.getElementById("detalispoke");
 
-export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, height, abilities, abilities2, abilities3, hp, attack, defense, specialatt, specialdef, speed){
+export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, height, abilities, abilities2, hp, attack, defense, specialatt, specialdef, speed){
     const typeimg1 = `src/assets/types/${type}.svg`;
     const typeimg2 = type2 ? `src/assets/types/${type2}.svg` : '';  
 
@@ -61,11 +60,11 @@ export function createCard(pokemon, imageUrl, type, type2, ShinyUrl, weight, hei
             ${typeimg1 ? `<img src="${typeimg1}" alt="${type} type image" class="type-img">` : ''}
             ${typeimg2 ? `<img src="${typeimg2}" alt="${type2} type image" class="type-img">` : ''}
         </section>
-        <h2> ${id}.${pokemon.name}</h2>     
+        <h2> ${id}.${pokemon.name}</h2>  
         <div id="container-status">
             <p>hp: ${hp}</p>
             <progress id='progress' max='255' value='${hp}'"></progress>
-            <p>attack: ${attack}</p>
+            <p>attack: ${attack}</p> 
             <progress id='progress' max='255' value='${attack}'></progress>
             <p>defense: ${defense}</p>
             <progress id='progress' max='255' value='${defense}'></progress>

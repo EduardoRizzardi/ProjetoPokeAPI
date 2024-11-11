@@ -2,7 +2,7 @@ import { createCard } from "./card/card.js";
 import { listAllPokemons, listTypePoke, listTypePoke2 } from "./fetchApi/fetchfunctions.js";
 
 let allPokemons = [];
-let limit = 151;
+let limit = 25;
 let offset = 0;
 
 async function loadPokemons() {
@@ -36,15 +36,12 @@ function searchPokemons(query) {
         pokemon.name.toLowerCase().includes(query.toLowerCase())
     );
 
-    const pokemonList = document.getElementById('pokemon-list');
-    pokemonList.innerHTML = '';
-
     filteredPokemons.forEach(async (pokemon) => {
         const type = await listTypePoke(pokemon.name);
         const type2 = await listTypePoke2(pokemon.name);
 
         const id = allPokemons.findIndex(p => p.name === pokemon.name) + 1; 
-
+        
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 
         createCard(pokemon, id, type, type2, imageUrl);
