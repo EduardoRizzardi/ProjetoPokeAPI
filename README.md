@@ -21,4 +21,4 @@ Esse projeto foi desenvolvido por [Eduardo](https://github.com/EduardoRizzardi) 
 
 # Tecnologias utilizadas
 
-![Imagem HTML](src\assets\images\HTML5.png)
+<img src="/src/assets/images/HTML5.png" width="120">
