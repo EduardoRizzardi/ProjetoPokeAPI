@@ -1,10 +1,13 @@
 @import "header.css";
+@import "stylecard.css";
+@import "stylefilter.css";
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Oxanium', cursive;
+    color: #000;
 }
 
 main{
@@ -14,120 +17,119 @@ main{
 h5{
     font-size: 1.8em;
 }
+
+h1{
+    color: #000;
+}
+
 p{
     font-size: 1.3em;
 }
+
+.pokebutton {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: 2px 3px 3px rgb(41, 41, 41);
+}
+
+.pokebutton:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+    }
+    
 
 body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     row-gap: 40px;
-    /*background-image: url("/src/assets/images/background-pokemon-field3.jpg");*/
     background-image: linear-gradient(rgb(77, 185, 235), rgb(188, 242, 255));
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.line{
-    height: 2px;
-    background-color: #656565;
-    margin: 10px 0 20px 0;
+#Botão-Final-VerMais{
+    padding: 15px 30px ;
+    border-radius: 20px;
+    font-size: 30px;
+    box-shadow: 2px 3px 3px rgb(41, 41, 41);
 }
 
-.card-img-top{
-    filter: grayscale(100%);
+@media (max-width: 1510px){
+    .col-md-3{
+        width: 30%;
+    }
+
 }
 
-.card-img-top:hover{
-    filter: grayscale(0%);
-    transform: scale(0.9);
-    transition: 1.5s;
-}
+@media (max-width: 1308px){
+   .row{
+    width: 94%;
+   }
 
-.card{
-    box-shadow: 5px 5px 5px rgb(41, 41, 41);
-    float: left;
-    margin-bottom: 20px; 
-    margin-left: 20px;
 }
-
-.input-group{
-    margin-left: 2px;
-}
-
-.ghost{
-    background-color: #705898;
-}
-.ice{
-    background-color: #98d8d8;
-}
-
-.fire {
-    background-color: #f05030; 
-}
-
-.grass {
-    background-color: #78c850 ; 
-}
-
-.electric {
-    background-color: #f8d030; 
-}
-
-.water {
-    background-color: #6890f0;
-}
-
-.ground {
-    background-color: #e0c068; 
-}
-
-.rock {
-    background-color: #b8a038; 
-}
-
-.fairy {
-    background-color: rgba(252, 234, 255, 0.8); 
-}
-
-.poison {
-    background-color: #a040a0; 
-}
-
-.bug {
-    background-color: #68a090; 
-}
-
-.dragon {
-    background-color: #7038f8; 
-}
-
-.psychic {
-    background-color: #f85888; 
-}
-
-.flying {
-    background-color: #a890f0; 
-}
-
-.fighting {
-    background-color: #903028; 
-}
-
-.normal {
-    background-color: #a8a878; 
-}
-
-.wrapper-content {
-    background-color: #fff; 
-    padding: 15px;
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-    width: 100%; 
-    display: flex;
+@media (max-width:1056px){
+  #pokemon-list{
+    width: 60%;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+@media (max-width:  1300px) {
+    .header-logo {
+        max-width: 60vw;
+    }
+
+    .Poke-top {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .col-md-3 {
+        width: 60%;
+        margin: 0 auto;
+        height: auto;
+        padding: 2%;
+        position: static;
+        margin-top: 20px;
+        box-shadow: none;
+    }
+
+    .col-md-8{
+        width: 100%;
+        
+    }
+
+   .row{
+    width: 80%;
+   } 
+   .header-content{
+    width: 80%;
+   }
+   #pokemon-list{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 800px) {
+    .col-md-3{
+        width: 80%;
+    }
+}
+
+@media (max-width: 380px) {
+    .col-md-3{
+        width: 90%;
+    }
 }

@@ -1,0 +1,108 @@
+.card-img-top{
+    filter: grayscale(100%);
+}
+
+.card-img-top:hover{
+    filter: grayscale(0%);
+    transform: scale(0.9);
+    transition: 1.5s;
+}
+
+.card{
+    box-shadow: 5px 5px 5px rgb(41, 41, 41);
+    float: left;
+    margin-bottom: 20px; 
+    margin-left: 20px;
+    
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+/*Colors Poke*/
+
+.steel{
+    background-color: #b8b8d0;
+}
+
+.dark{
+    background-color: #705848;
+}
+
+.ghost{
+    background-color: #705898;
+}
+
+.ice{
+    background-color: #98d8d8;
+}
+
+.fire {
+    background-color: #d6583f; 
+}
+
+.grass {
+    background-color: #78c850 ; 
+}
+
+.electric {
+    background-color: #f8d030; 
+}
+
+.water {
+    background-color: #6890f0;
+}
+
+.ground {
+    background-color: #e0c068; 
+}
+
+.rock {
+    background-color: #b8a038; 
+}
+
+.fairy {
+    background-color: rgba(252, 234, 255, 0.8); 
+}
+
+.poison {
+    background-color: #a040a0; 
+}
+
+.bug {
+    background-color: #68a090; 
+}
+
+.dragon {
+    background-color: #7c45fc; 
+}
+
+.psychic {
+    background-color: #f85888; 
+}
+
+.flying {
+    background-color: #a890f0; 
+}
+
+.fighting {
+    background-color: #903028; 
+}
+
+.normal {
+    background-color: #a8a878; 
+}
+
+.wrapper-content {
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
