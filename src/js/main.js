@@ -34,7 +34,7 @@ async function displayPokemons() {
 function searchPokemons(query) {
     const pokemonList = document.getElementById('pokemon-list');
     pokemonList.innerHTML = '';
-
+    src\assets\images\HTML5.png
     
     const filteredPokemons = allPokemons.filter(pokemon => {
         const pokemonId = allPokemons.findIndex(p => p.name === pokemon.name) + 1; 

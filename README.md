@@ -21,7 +21,7 @@ Esse projeto foi desenvolvido por [Eduardo](https://github.com/EduardoRizzardi) 
 
 # Tecnologias utilizadas
 
-![Imagem HTML](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png)
+![Imagem HTML](src\assets\images\HTML5.png)
 ![Imagem CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png)
 ![Imagem JS](https://samory.sistemasresponsivos.com.br/wp-content/uploads/2024/01/png-transparent-javascript-logo-comment-html-markup-language-analitycs-angle-text-rectangle.png)
 ![BootStrap] (https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png)
