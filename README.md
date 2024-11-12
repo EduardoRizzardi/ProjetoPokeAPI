@@ -1,7 +1,9 @@
-# Projeto Pokedex     <img src="/src/assets/images/Pokeapi.png" width="200">
+# Projeto Pokedex     
 
 Esse projeto foi desenvolvido por [Eduardo](https://github.com/EduardoRizzardi) e [Douglas](https://github.com/Douglasx06), com o intuito de criar uma pokedex resposiva e interativa e funcional para o projeto final do curso Tecnico em Desenvolvimento de sistema no Senac TECH.
-
+    <div style="text-align: center;">
+        <img src="/src/assets/images/Pokeapi.png" width="200">
+    </div>
 # Funcionalidades
 
 * Mostrar todos os pokemon.
