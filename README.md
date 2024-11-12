@@ -22,9 +22,9 @@ Esse projeto foi desenvolvido por [Eduardo](https://github.com/EduardoRizzardi) 
 # Tecnologias utilizadas
 
 <p>
-    <img src="/src/assets/images/HTML5.png" width="120">
-    <img src="/src/assets/images/css.webp" width="120">
-    <img src="/src/assets/images/JavaScript.png" width="120">
-    <img src="/src/assets/images/bootstrap.png" width="120">
-    <img src="/src/assets/images/Pokeapi.png" width="120">
+    <img src="/src/assets/images/HTML5.png" width="170">
+    <img src="/src/assets/images/css.png" width="120" height="120" style="max-width: 100%; height: auto;">
+    <img src="/src/assets/images/JavaScript.png" width="158">
+    <img src="/src/assets/images/bootstrap.png" width="180">
+    <img src="/src/assets/images/Pokeapi.png" width="220">
 </p>
