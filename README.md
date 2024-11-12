@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido por [Eduardo](https://github.com/EduardoRizzardi) 
 # Tecnologias utilizadas
 
 HTML
-CSS
+![Imagem CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png)
 Java Script
 BootStrap
 PokeAPI
