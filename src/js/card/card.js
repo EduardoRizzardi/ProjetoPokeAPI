@@ -13,7 +13,7 @@ export function createCard(pokemon, id, type, type2, imageUrl) {
                     <h5 class="card-title">${pokemon.name}</h5>
                     <p class="text-id">N° ${id}</p>
                     <p class="text-type">Type: ${type} ${type2 ? ` / ${type2}` : ''}</p>
-                    <a href="/details.html?url=${pokemon.url}" class="pokebutton" data-id="${id}">Ver mais</a>
+                    <a href="details.html?url=${pokemon.url}" class="pokebutton" data-id="${id}">Ver mais</a>
                 </div>
             </div>
     `;
